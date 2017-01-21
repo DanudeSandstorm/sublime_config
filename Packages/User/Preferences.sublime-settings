@@ -1,7 +1,16 @@
 {
 	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.docx",
+		"*.pdf",
+		"*.xlsx"
+	],
+	"font_size": 10,
 	"ignored_packages":
 	[
+		"JavaIME",
 		"Vintage"
 	]
 }

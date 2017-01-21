@@ -5,10 +5,20 @@
 	],
 	"installed_packages":
 	[
+		"Ensime",
+		"GitHub Flavored Markdown Preview",
+		"HTML-CSS-JS Prettify",
+		"Jade",
+		"JavaIME",
 		"JavaScript & NodeJS Snippets",
 		"JavaScript Completions",
+		"JavaScriptNext - ES6 Syntax",
+		"Javatar",
+		"Line Endings Unify",
 		"Markdown Preview",
 		"Origami",
+		"Package Control",
+		"Sass",
 		"SublimeLinter",
 		"SublimeLinter-jshint"
 	]

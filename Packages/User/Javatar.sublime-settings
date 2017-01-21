@@ -1,0 +1,25 @@
+{
+	"jdk_version":
+	{
+		"JDK1.8.0u101":
+		{
+			"path": "C:\\Program Files (x86)\\Java\\jdk1.8.0_101\\bin",
+			"update": "101",
+			"version": "1.8.0"
+		},
+		"use": "JDK1.8.0u101"
+	},
+	"message_id": 20,
+	"project_data":
+	{
+		"2":
+		{
+			"folders":
+			[
+				{
+					"path": "C:\\Users\\Daniel\\git\\mycourses-ext"
+				}
+			]
+		}
+	}
+}
