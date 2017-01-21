@@ -1,4 +1,9 @@
 Backup/
 Local/
-Packages/
-!*/User/
+Packages/*
+!User/
+Installed\ Packages/
+Package\ Control*
+!Package\ Control.sublime-settings
+*.crt
+
