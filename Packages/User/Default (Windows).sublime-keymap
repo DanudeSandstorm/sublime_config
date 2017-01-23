@@ -1,5 +1,70 @@
 [
 	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
 	{ "keys": ["ctrl+shift+v"], "command": "paste" },
-	{ "keys": ["alt+w"], "command": "markdown_preview", "args": {"target": "browser", "parser":"github"} }
+    //{ "keys": ["alt+up"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": false} },
+    { "keys": ["ctrl+enter"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true} },
+    { "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/User/next_line.sublime-macro"}},
+    { "keys": ["ctrl+shift+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+    // { "keys": ["ctrl+shift+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"} },
+    { "keys": ["tab"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+        [
+            { "key": "following_text", "operator": "regex_contains", "operand": "^[',>\\]]", "match_all": true },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+        ]
+    },
+    //Vi Mode
+    { "keys": ["j", "k"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+    },
+    { "keys": ["k"], "command": "set_motion", "args": {
+        "motion": "move",
+        "motion_args": {"by": "lines", "forward": true, "extend": true },
+        "linewise": true },
+        "context": [{"key": "setting.command_mode"}]
+    },
+
+    { "keys": ["i"], "command": "set_motion", "args": {
+        "motion": "move",
+        "motion_args": {"by": "lines", "forward": false, "extend": true },
+        "linewise": true },
+        "context": [{"key": "setting.command_mode"}]
+    },
+
+    { "keys": ["l"], "command": "set_motion", "args": {
+        "motion": "vi_move_by_characters_in_line",
+        "motion_args": {"forward": true, "extend": true, "visual": false }},
+        "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["j"], "command": "set_motion", "args": {
+        "motion": "vi_move_by_characters_in_line",
+        "motion_args": {"forward": false, "extend": true, "visual": false }},
+        "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["u"], "command": "run_macro_file",
+        "args": {"file": "res://Packages/User/beginning_of_line.sublime-macro"},
+        "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["o"], "command": "run_macro_file",
+        "args": {"file": "res://Packages/User/end_of_line.sublime-macro"},
+        "context": [{"key": "setting.command_mode"}]
+    },
+    { "keys": ["a"], "command": "enter_insert_mode",
+          "context":
+          [
+                {"key": "setting.command_mode"},
+                {"key": "selection_empty"}
+          ]
+    },
+    { "keys": ["s"], "command": "enter_insert_mode", "args":
+        {"insert_command": "move", "insert_args": {"by": "characters", "forward": true} },
+        "context":
+        [
+            {"key": "setting.command_mode"},
+            {"key": "selection_empty"}
+        ]
+    },
 ]

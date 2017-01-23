@@ -1,0 +1,13 @@
+[
+    {"command": "move_to", "args": {
+            "to": "eol",
+            "extend": false
+        }
+    },
+    {
+        "command": "set_motion", "args": {
+            "motion": "vi_move_by_characters_in_line",
+            "motion_args": {"forward": false, "extend": true, "visual": false }
+        }
+    }
+]

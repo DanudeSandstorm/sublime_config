@@ -1,16 +1,40 @@
 {
-	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
-	"ensure_newline_at_eof_on_save": true,
-	"file_exclude_patterns":
+	"added_words":
 	[
-		"*.docx",
-		"*.pdf",
-		"*.xlsx"
+		"cpp",
+		"Arehart",
+		"Clearcase",
+		"struct",
+		"const",
+		"enum",
+		"ctrl",
+		"args",
+		"iostream",
+		"iomanip",
+		"bool"
 	],
-	"font_size": 10,
+	"auto_complete_commit_on_tab": true,
+	"auto_complete_selector": "source, text.plain, meta.tag - punctuation.definition.tag.begin",
+	"default_encoding": "utf-8",
+	"ensure_newline_at_eof_on_save": true,
 	"ignored_packages":
 	[
-		"JavaIME",
-		"Vintage"
-	]
+		"C++ Starting Kit"
+	],
+	"ignored_words":
+	[
+		"Fset",
+		"climits",
+		"eval",
+		"evals",
+		"freqs",
+		"ostream",
+		"sig",
+		"ttdb",
+		"usec"
+	],
+	"shift_tab_unindent": true,
+	"spell_check": true,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
 }
