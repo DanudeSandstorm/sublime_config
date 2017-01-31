@@ -1,6 +1,6 @@
 [
-	{ "keys": ["ctrl+v"], "command": "paste_and_indent" },
-	{ "keys": ["ctrl+shift+v"], "command": "paste" },
+    { "keys": ["ctrl+v"], "command": "paste_and_indent" },
+    { "keys": ["ctrl+shift+v"], "command": "paste" },
     //{ "keys": ["alt+up"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": false} },
     { "keys": ["ctrl+enter"], "command": "move", "args": {"by": "stops", "empty_line": true, "forward": true} },
     { "keys": ["shift+enter"], "command": "run_macro_file", "args": {"file": "res://Packages/User/next_line.sublime-macro"}},
@@ -18,11 +18,48 @@
     /////////
     //Vi Mode
     /////////
-    //Remove escape into insert mode
+    //Remove escape into insert mode.
+    //Need to redefine original escape actions 
     { "keys": ["escape"], "command": "exit_visual_mode",
         "context":
         [
             { "key": "setting.command_mode", "operand": false }
+        ]
+    },
+    { "keys": ["escape"], "command": "single_selection", "context":
+        [
+            { "key": "num_selections", "operator": "not_equal", "operand": 1 }
+        ]
+    },
+    { "keys": ["escape"], "command": "clear_fields", "context":
+        [
+            { "key": "has_next_field", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["escape"], "command": "clear_fields", "context":
+        [
+            { "key": "has_prev_field", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["escape"], "command": "hide_panel", "args": {"cancel": true},
+        "context":
+        [
+            { "key": "panel_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["escape"], "command": "hide_overlay", "context":
+        [
+            { "key": "overlay_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["escape"], "command": "hide_popup", "context":
+        [
+            { "key": "popup_visible", "operator": "equal", "operand": true }
+        ]
+    },
+    { "keys": ["escape"], "command": "hide_auto_complete", "context":
+        [
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true }
         ]
     },
     // Remap Escape to "j,k"
