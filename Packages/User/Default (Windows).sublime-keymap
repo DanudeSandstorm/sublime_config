@@ -12,7 +12,20 @@
             { "key": "auto_complete_visible", "operator": "equal", "operand": false }
         ]
     },
+    //Switch views
+    { "keys": ["ctrl+shift+o"], "command": "next_view" },
+    { "keys": ["ctrl+shift+u"], "command": "prev_view" },
+    /////////
     //Vi Mode
+    /////////
+    //Remove escape into insert mode
+    { "keys": ["escape"], "command": "exit_visual_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false }
+        ]
+    },
+    // Remap Escape to "j,k"
     { "keys": ["j", "k"], "command": "exit_insert_mode",
         "context":
         [
@@ -20,20 +33,19 @@
             { "key": "setting.is_widget", "operand": false }
         ]
     },
+    //Remap movement keys
     { "keys": ["k"], "command": "set_motion", "args": {
         "motion": "move",
         "motion_args": {"by": "lines", "forward": true, "extend": true },
         "linewise": true },
         "context": [{"key": "setting.command_mode"}]
     },
-
     { "keys": ["i"], "command": "set_motion", "args": {
         "motion": "move",
         "motion_args": {"by": "lines", "forward": false, "extend": true },
         "linewise": true },
         "context": [{"key": "setting.command_mode"}]
     },
-
     { "keys": ["l"], "command": "set_motion", "args": {
         "motion": "vi_move_by_characters_in_line",
         "motion_args": {"forward": true, "extend": true, "visual": false }},
@@ -44,6 +56,7 @@
         "motion_args": {"forward": false, "extend": true, "visual": false }},
         "context": [{"key": "setting.command_mode"}]
     },
+    //End and beginning of line
     { "keys": ["u"], "command": "run_macro_file",
         "args": {"file": "res://Packages/User/beginning_of_line.sublime-macro"},
         "context": [{"key": "setting.command_mode"}]
@@ -52,6 +65,7 @@
         "args": {"file": "res://Packages/User/end_of_line.sublime-macro"},
         "context": [{"key": "setting.command_mode"}]
     },
+    //Insert mode (before and after cursor)
     { "keys": ["a"], "command": "enter_insert_mode",
           "context":
           [
