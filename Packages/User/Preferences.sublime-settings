@@ -11,23 +11,38 @@
 		"args",
 		"iostream",
 		"iomanip",
-		"bool"
+		"bool",
+		"fset",
+		"structs",
+		"Mutex",
+		"Init",
+		"msg"
 	],
 	"auto_complete_commit_on_tab": true,
 	"auto_complete_selector": "source, text.plain, meta.tag - punctuation.definition.tag.begin",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"default_encoding": "utf-8",
 	"ensure_newline_at_eof_on_save": true,
+	"font_size": 13,
 	"ignored_packages":
 	[
-		"C++ Starting Kit"
+		"AutoSpell"
 	],
 	"ignored_words":
 	[
+		"Eval",
+		"Evals",
 		"Fset",
+		"Itr",
+		"Msec",
+		"Num",
 		"climits",
+		"diffed",
 		"eval",
 		"evals",
 		"freqs",
+		"inport",
+		"msec",
 		"ostream",
 		"sig",
 		"ttdb",

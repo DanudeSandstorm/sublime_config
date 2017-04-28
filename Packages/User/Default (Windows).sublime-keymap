@@ -8,10 +8,13 @@
     // { "keys": ["ctrl+shift+backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard BOL.sublime-macro"} },
     { "keys": ["tab"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
         [
-            { "key": "following_text", "operator": "regex_contains", "operand": "^[',>\\]]", "match_all": true },
+            { "key": "following_text", "operator": "regex_contains", "operand": "^[,>\\]]", "match_all": true },
             { "key": "auto_complete_visible", "operator": "equal", "operand": false }
         ]
     },
+    { "keys": ["ctrl+n"], "command": "new_window" },
+    { "keys": ["ctrl+t"], "command": "new_file" },
+
     //Switch views
     { "keys": ["ctrl+shift+o"], "command": "next_view" },
     { "keys": ["ctrl+shift+u"], "command": "prev_view" },
@@ -19,7 +22,7 @@
     //Vi Mode
     /////////
     //Remove escape into insert mode.
-    //Need to redefine original escape actions 
+    //Need to redefine original escape actions
     { "keys": ["escape"], "command": "exit_visual_mode",
         "context":
         [

@@ -1,0 +1,9 @@
+{
+    "custom_triggers" : [],
+    "custom_replacements": {
+        "teh": "the",
+        "viod": "",
+        "recieved": "received",
+        "ahve": "have"
+    }
+}

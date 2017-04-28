@@ -5,21 +5,20 @@
 	],
 	"installed_packages":
 	[
-		"Ensime",
-		"GitHub Flavored Markdown Preview",
-		"HTML-CSS-JS Prettify",
-		"Jade",
-		"JavaIME",
-		"JavaScript & NodeJS Snippets",
-		"JavaScript Completions",
-		"JavaScriptNext - ES6 Syntax",
-		"Javatar",
-		"Line Endings Unify",
-		"Markdown Preview",
+		"All Autocomplete",
+		"AutoSpell",
+		"Babel",
+		"C++ Starting Kit",
+		"Mediawiker",
 		"Origami",
 		"Package Control",
-		"Sass",
+		"Print to HTML",
+		"Project Specific Syntax Settings",
+		"ScopeHunter",
+		"SFTP",
+		"SublimeAStyleFormatter",
 		"SublimeLinter",
-		"SublimeLinter-jshint"
+		"SublimeLinter-contrib-eslint",
+		"VintageES"
 	]
 }
